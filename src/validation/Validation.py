@@ -54,7 +54,11 @@ def check_Password():
 def check_Identifier():
     input_identifier = input("Enter the identifier name: ")
     s = input_identifier
-
+    # short way -->
+    '''
+    if s.isidentifier():
+        print("Valid")
+    '''
     keywords = keyword.kwlist
     special = "!@:;',./|\#%^&*-"
     fal = 0
@@ -79,3 +83,11 @@ def check_Identifier():
 def check_Email():
     input_Email = input("Enter the Email: ")
     e = input_Email
+    r = "abcdefghijklmnopqrstuvwxyz._0123456789/\*-"
+    if "@" in e:
+        t = e.partition("@")
+        if all(i in r for i in t[0]):
+            if all(j in r for j in t[2]) and (t[2].endswith(".com") or t[2].endswith(".in")):
+                print("Valid Email!!")
+            else:
+                print("Invalid Email!!")
