@@ -1,11 +1,5 @@
 import keyword
 
-print("Press 1. for validate password")
-print("Press 2. for validate Email")
-print("Press 3. for validate Identifier name")
-print("Press 4. for validate IPv4 address")
-choice = int(input("Enter the choice:"))
-
 
 def check_Password():
     input_password = input("Enter the password: ")
@@ -104,9 +98,42 @@ def check_Address():
         print("Invalid IP Address!!")
 
 
-if choice == 1:
-    check_Password()
-if choice == 2:
-    check_Email()
-if choice == 3:
-    check_Identifier()
+while True:
+    print("Press 1. for validate password")
+    print("Press 2. for validate Email")
+    print("Press 3. for validate Identifier name")
+    print("Press 4. for validate IPv4 address")
+    choice = int(input("Enter the choice:"))
+
+    if choice == 1:
+        check_Password()
+        print("Would you like to continue (y/n):")
+        ans = input()
+        if ans == 'y':
+            pass
+        else:
+            break
+    if choice == 2:
+        check_Email()
+        print("Would you like to continue (y/n):")
+        ans = input()
+        if ans == 'y':
+            pass
+        else:
+            break
+    if choice == 3:
+        check_Identifier()
+        print("Would you like to continue (y/n):")
+        ans = input()
+        if ans == 'y':
+            pass
+        else:
+            break
+    if choice == 4:
+        check_Address()
+        print("Would you like to continue (y/n):")
+        ans = input()
+        if ans == 'y':
+            pass
+        else:
+            break
