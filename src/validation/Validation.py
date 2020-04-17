@@ -98,6 +98,10 @@ def check_Address():
     input_Address = input("Enter the IPv4 Address: ")
     s = input_Address
     l = s.split(".")
+    if all(int(i) <= 255 and int(i) >= 0 for i in l):
+        print("Valid IP Address!!")
+    else:
+        print("Invalid IP Address!!")
 
 
 if choice == 1:
