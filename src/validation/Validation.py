@@ -1,3 +1,5 @@
+import keyword
+
 print("Press 1. for validate password")
 print("Press 2. for validate Email")
 print("Press 3. for validate Identifier name")
@@ -50,4 +52,25 @@ def check_Password():
 
 
 def check_Identifier():
-    input_identifier = input("Enter the identifier name:")
+    input_identifier = input("Enter the identifier name: ")
+    s = input_identifier
+
+    keywords = keyword.kwlist
+    special = "!@:;',./|\#%^&*-"
+    fal = 0
+    tru = 0
+    if s in keywords:
+        fal += 1
+    if any(i in special for i in s):
+        fal += 1
+    for i in range(len(s)):
+        if s[0].isdigit() or s[i] == " ":
+            fal += 1
+    if all(i.isalnum() for i in s):
+        tru += 1
+    if any(i == '_' or i == '$' for i in s):
+        tru += 1
+    if fal == 0 and tru != 0:
+        print("Valid Identifier!!")
+    else:
+        print("Invalid Identifier!!")
