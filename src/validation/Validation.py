@@ -74,3 +74,8 @@ def check_Identifier():
         print("Valid Identifier!!")
     else:
         print("Invalid Identifier!!")
+
+
+def check_Email():
+    input_Email = input("Enter the Email: ")
+    e = input_Email
