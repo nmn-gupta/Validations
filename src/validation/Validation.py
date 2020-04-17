@@ -47,3 +47,7 @@ def check_Password():
 
     else:
         print("Valid Password")
+
+
+def check_Identifier():
+    input_identifier = input("Enter the identifier name:")
