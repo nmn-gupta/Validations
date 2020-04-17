@@ -4,6 +4,7 @@ print("Press 1. for validate password")
 print("Press 2. for validate Email")
 print("Press 3. for validate Identifier name")
 print("Press 4. for validate IPv4 address")
+choice = int(input("Enter the choice:"))
 
 
 def check_Password():
@@ -91,3 +92,17 @@ def check_Email():
                 print("Valid Email!!")
             else:
                 print("Invalid Email!!")
+
+
+def check_Address():
+    input_Address = input("Enter the IPv4 Address: ")
+    s = input_Address
+    l = s.split(".")
+
+
+if choice == 1:
+    check_Password()
+if choice == 2:
+    check_Email()
+if choice == 3:
+    check_Identifier()
