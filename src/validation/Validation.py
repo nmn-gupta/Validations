@@ -1,3 +1,10 @@
+"""
+ *   Created by PyCharm Profressional, 2020
+ *   User: nmn-gupta
+ *   Date: 17/04/20
+ *   Time: 9:50 PM
+"""
+
 import keyword
 
 
@@ -86,10 +93,12 @@ def check_Email():
                 print("Valid Email!!")
             else:
                 print("Invalid Email!!")
+    else:
+        print("Invalid Email!!")
 
 
 def check_Address():
-    input_Address = input("Enter the IPv4 Address: ")
+    input_Address = input("Enter the IP Address: ")
     s = input_Address
     l = s.split(".")
     if all(int(i) <= 255 and int(i) >= 0 for i in l):
@@ -102,7 +111,7 @@ while True:
     print("Press 1. for validate password")
     print("Press 2. for validate Email")
     print("Press 3. for validate Identifier name")
-    print("Press 4. for validate IPv4 address")
+    print("Press 4. for validate IP Address")
     choice = int(input("Enter the choice:"))
 
     if choice == 1:
@@ -122,6 +131,7 @@ while True:
         else:
             break
     if choice == 3:
+
         check_Identifier()
         print("Would you like to continue (y/n):")
         ans = input()
